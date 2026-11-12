@@ -1,0 +1,146 @@
+/* ==========================================================================
+   MoneyDrops — Design tokens
+   Fonte única das cores, tipografia e espaçamentos do app.
+   Modo claro é o padrão; o escuro é ativado por [data-theme="dark"] no <html>
+   ou automaticamente pela preferência do sistema.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* ---------- Cores · modo claro (off-white) ---------- */
+  --md-bg: #f7f6f2;              /* fundo off-white */
+  --md-surface: #ffffff;         /* cartões, tabelas, header */
+  --md-surface-muted: #efeee9;   /* chips, áreas secundárias */
+  --md-border: #e4e2db;
+  --md-border-strong: #d6d3ca;   /* bordas de inputs e botões secundários */
+  --md-text: #17181a;
+  --md-text-secondary: #5f6368;
+
+  --md-green: #0e7a44;           /* Verde Drop: marca, ações, saldo positivo */
+  --md-green-hover: #0a5c33;
+  --md-green-soft: #e3f2e9;      /* fundo de tags e destaques verdes */
+  --md-on-green: #ffffff;        /* texto sobre o verde */
+
+  --md-expense: #c2410c;         /* gastos, pendências */
+
+  /* Escala de categorias para gráficos (claro → escuro do verde + neutro) */
+  --md-chart-1: #0b5e35;
+  --md-chart-2: #0e7a44;
+  --md-chart-3: #3db36f;
+  --md-chart-4: #8fd3a8;
+  --md-chart-5: #c9ebd6;
+  --md-chart-neutral: #c9ccd1;
+
+  /* ---------- Tipografia ---------- */
+  --md-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --md-text-display: 2.25rem;    /* 36px · títulos de página */
+  --md-text-title: 1.5rem;       /* 24px · títulos de seção */
+  --md-text-subtitle: 1.0625rem; /* 17px · títulos de cartão */
+  --md-text-body: 1rem;          /* 16px */
+  --md-text-small: 0.875rem;     /* 14px · tabela */
+  --md-text-caption: 0.8125rem;  /* 13px · legendas, rótulos */
+  --md-text-kpi: 1.75rem;        /* 28px · números dos cards de resumo */
+
+  --md-weight-regular: 400;
+  --md-weight-medium: 500;
+  --md-weight-semibold: 600;
+  --md-weight-bold: 700;
+
+  --md-tracking-tight: -0.02em;  /* títulos e números grandes */
+
+  /* ---------- Espaçamento, raios e sombra ---------- */
+  --md-space-1: 4px;
+  --md-space-2: 8px;
+  --md-space-3: 12px;
+  --md-space-4: 16px;
+  --md-space-5: 24px;
+  --md-space-6: 32px;
+  --md-space-7: 48px;
+
+  --md-radius-sm: 10px;          /* botões, inputs */
+  --md-radius-md: 14px;          /* cartões */
+  --md-radius-lg: 16px;
+  --md-radius-pill: 999px;       /* chips */
+
+  --md-shadow: 0 1px 2px rgb(23 24 26 / 0.04);
+
+  --md-touch-target: 44px;       /* altura mínima de botões e campos */
+  --md-container: 1280px;
+
+  color-scheme: light;
+}
+
+/* ---------- Cores · modo escuro (cinza) ---------- */
+:root[data-theme="dark"] {
+  --md-bg: #1e2023;
+  --md-surface: #272a2e;
+  --md-surface-muted: #32363b;
+  --md-border: #363a40;
+  --md-border-strong: #464b52;
+  --md-text: #ecedee;
+  --md-text-secondary: #a3a8ae;
+
+  --md-green: #3dd68c;
+  --md-green-hover: #8fd3a8;
+  --md-green-soft: #1e3a2b;
+  --md-on-green: #10231a;
+
+  --md-expense: #f28b5b;
+
+  --md-chart-1: #3dd68c;
+  --md-chart-2: #2a9a60;
+  --md-chart-3: #8fd3a8;
+  --md-chart-4: #1e5a3c;
+  --md-chart-5: #c9ebd6;
+  --md-chart-neutral: #5b6168;
+
+  --md-shadow: none;
+
+  color-scheme: dark;
+}
+
+/* Segue o sistema quando o usuário ainda não escolheu um tema */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --md-bg: #1e2023;
+    --md-surface: #272a2e;
+    --md-surface-muted: #32363b;
+    --md-border: #363a40;
+    --md-border-strong: #464b52;
+    --md-text: #ecedee;
+    --md-text-secondary: #a3a8ae;
+    --md-green: #3dd68c;
+    --md-green-hover: #8fd3a8;
+    --md-green-soft: #1e3a2b;
+    --md-on-green: #10231a;
+    --md-expense: #f28b5b;
+    --md-chart-1: #3dd68c;
+    --md-chart-2: #2a9a60;
+    --md-chart-3: #8fd3a8;
+    --md-chart-4: #1e5a3c;
+    --md-chart-5: #c9ebd6;
+    --md-chart-neutral: #5b6168;
+    --md-shadow: none;
+    color-scheme: dark;
+  }
+}
+
+/* ---------- Base ---------- */
+html {
+  font-family: var(--md-font);
+  background: var(--md-bg);
+  color: var(--md-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+/* Valores monetários sempre com algarismos de largura fixa */
+.md-money,
+td[data-type="money"] {
+  font-variant-numeric: tabular-nums;
+}
