@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>MoneyDrops — Planejador do mês (modo escuro)</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><style>
+body{margin:0}
+a{color:#0E7A44}a:hover{color:#0A5C33}
+</style></head><body>
+
+<div style="width: 100%; min-height: 1180px; box-sizing: border-box; background: #1E2023; color: #ECEDEE; font-family: 'Inter', system-ui, sans-serif">
+
+<header style="background: #272A2E; border-bottom: 1px solid #363A40">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 C50 4 16 44 16 64 A34 34 0 0 0 84 64 C84 44 50 4 50 4 Z" fill="#3DD68C"></path><rect x="31" y="66" width="10" height="16" rx="3" fill="#10231A"></rect><rect x="45" y="56" width="10" height="26" rx="3" fill="#10231A"></rect><rect x="59" y="44" width="10" height="38" rx="3" fill="#10231A"></rect></svg>
+<span style="font-size: 20px; font-weight: 700; letter-spacing: -0.03em">Money<span style="color: #3DD68C">Drops</span></span>
+</div>
+<nav aria-label="Abas principais" style="display: flex; flex-wrap: wrap; gap: 4px">
+
+<a href="inicio-escuro.html" style="text-decoration: none; font-size: 15px; font-weight: 500; color: #A3A8AE; padding: 22px 14px 20px; border-bottom: 2px solid transparent">Início</a>
+
+<a href="estudos-escuro.html" style="text-decoration: none; font-size: 15px; font-weight: 500; color: #A3A8AE; padding: 22px 14px 20px; border-bottom: 2px solid transparent">Estudos</a>
+
+<a href="planejador-escuro.html" style="text-decoration: none; font-size: 15px; font-weight: 600; color: #ECEDEE; padding: 22px 14px 20px; border-bottom: 2px solid #3DD68C">Planejador</a>
+
+<a href="resumo-escuro.html" style="text-decoration: none; font-size: 15px; font-weight: 500; color: #A3A8AE; padding: 22px 14px 20px; border-bottom: 2px solid transparent">Resumo</a>
+
+</nav>
+<div style="display: flex; align-items: center; gap: 10px">
+<button type="button" aria-label="Alternar tema claro e escuro" style="width: 44px; height: 44px; border-radius: 10px; border: 1px solid #363A40; background: #272A2E; color: #ECEDEE; display: flex; align-items: center; justify-content: center; cursor: pointer">
+
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+
+
+</button>
+<div style="width: 40px; height: 40px; border-radius: 50%; background: #1E3A2B; color: #3DD68C; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1280px; margin: 0 auto; padding: 32px 24px 48px; display: flex; flex-direction: column; gap: 24px">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A3A8AE">Planejador do mês</p>
+<h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.02em">Novembro de 2026</h1>
+</div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<button type="button" style="font-family: inherit; font-size: 15px; font-weight: 600; color: #ECEDEE; background: #272A2E; border: 1px solid #363A40; border-radius: 10px; padding: 0 18px; min-height: 44px; cursor: pointer">Exportar</button>
+<button type="button" style="font-family: inherit; font-size: 15px; font-weight: 600; color: #10231A; background: #3DD68C; border: none; border-radius: 10px; padding: 0 18px; min-height: 44px; cursor: pointer">+ Novo gasto</button>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="background: #272A2E; border: 1px solid #363A40; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; color: #A3A8AE">Renda do mês</p>
+<p style="margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: #ECEDEE">R$ 6.500,00</p>
+<p style="margin: 0; font-size: 13px; color: #A3A8AE">Salário + freelas</p>
+</div>
+
+<div style="background: #272A2E; border: 1px solid #363A40; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; color: #A3A8AE">Total gasto</p>
+<p style="margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: #F28B5B">R$ 4.182,40</p>
+<p style="margin: 0; font-size: 13px; color: #A3A8AE">64% da renda comprometida</p>
+</div>
+
+<div style="background: #272A2E; border: 1px solid #363A40; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; color: #A3A8AE">Saldo disponível</p>
+<p style="margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: #3DD68C">R$ 2.317,60</p>
+<p style="margin: 0; font-size: 13px; color: #A3A8AE">+12% vs. outubro</p>
+</div>
+
+<div style="background: #272A2E; border: 1px solid #363A40; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; color: #A3A8AE">Investido</p>
+<p style="margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: #ECEDEE">R$ 800,00</p>
+<p style="margin: 0; font-size: 13px; color: #A3A8AE">Meta do mês: R$ 1.000</p>
+</div>
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<section style="flex: 1 1 380px; min-width: 0; background: #272A2E; border: 1px solid #363A40; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 600">Gastos por categoria</h2>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+<div style="width: 176px; height: 176px; border-radius: 50%; background: conic-gradient(#3DD68C 0% 39%, #2A9A60 39% 62%, #8FD3A8 62% 74%, #1E5A3C 74% 83%, #C9EBD6 83% 89%, #5B6168 89% 100%); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+<div style="width: 112px; height: 112px; border-radius: 50%; background: #272A2E; display: flex; flex-direction: column; align-items: center; justify-content: center">
+<span style="font-size: 12px; color: #A3A8AE">Total</span>
+<span style="font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums">R$ 4.182</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; flex-grow: 1; min-width: 160px">
+
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px">
+<span style="width: 10px; height: 10px; border-radius: 3px; background: #3DD68C; flex-shrink: 0"></span>
+<span style="flex-grow: 1">Moradia</span>
+<span style="font-weight: 600; font-variant-numeric: tabular-nums">39%</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px">
+<span style="width: 10px; height: 10px; border-radius: 3px; background: #2A9A60; flex-shrink: 0"></span>
+<span style="flex-grow: 1">Mercado</span>
+<span style="font-weight: 600; font-variant-numeric: tabular-nums">23%</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px">
+<span style="width: 10px; height: 10px; border-radius: 3px; background: #8FD3A8; flex-shrink: 0"></span>
+<span style="flex-grow: 1">Transporte</span>
+<span style="font-weight: 600; font-variant-numeric: tabular-nums">12%</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px">
+<span style="width: 10px; height: 10px; border-radius: 3px; background: #1E5A3C; flex-shrink: 0"></span>
+<span style="flex-grow: 1">Lazer</span>
+<span style="font-weight: 600; font-variant-numeric: tabular-nums">9%</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px">
+<span style="width: 10px; height: 10px; border-radius: 3px; background: #C9EBD6; flex-shrink: 0"></span>
+<span style="flex-grow: 1">Assinaturas</span>
+<span style="font-weight: 600; font-variant-numeric: tabular-nums">6%</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px">
+<span style="width: 10px; height: 10px; border-radius: 3px; background: #5B6168; flex-shrink: 0"></span>
+<span style="flex-grow: 1">Outros</span>
+<span style="font-weight: 600; font-variant-numeric: tabular-nums">11%</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<section style="flex: 2 1 520px; min-width: 0; background: #272A2E; border: 1px solid #363A40; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 600">Gastos por dia</h2>
+<p style="margin: 0; font-size: 13px; color: #A3A8AE">Planejado: R$ 4.800 · Realizado: 87%</p>
+</div>
+<div style="height: 200px; display: flex; align-items: flex-end; gap: 6px; border-bottom: 1px solid #363A40">
+
+<div style="flex: 1 1 0; height: 14px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 6px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 44px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 7px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 190px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 10px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 24px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 6px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 16px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 35px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 9px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 60px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 21px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 6px; background: #4A5057; border-radius: 5px 5px 0 0"></div>
+
+<div style="flex: 1 1 0; height: 11px; background: #3DD68C; border-radius: 5px 5px 0 0"></div>
+
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 12px; color: #A3A8AE; font-variant-numeric: tabular-nums">
+<span>01/11</span><span>05/11</span><span>10/11</span><span>15/11</span>
+</div>
+</section>
+</div>
+
+<section style="background: #272A2E; border: 1px solid #363A40; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 600">Lançamentos</h2>
+<label style="display: flex; align-items: center; gap: 8px; border: 1px solid #363A40; border-radius: 10px; padding: 0 12px; min-height: 44px; color: #A3A8AE">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Buscar lançamento</span>
+<input type="search" placeholder="Buscar…" style="font-family: inherit; font-size: 14px; border: none; outline: none; background: transparent; color: #ECEDEE; width: 180px">
+</label>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 820px; border-collapse: collapse; font-size: 14px">
+<thead>
+<tr style="text-align: left; color: #A3A8AE; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em">
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40">Data</th>
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40">Descrição</th>
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40">Tipo</th>
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40">Pagamento</th>
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40">Fixo/Var.</th>
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40">Status</th>
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40">Obs.</th>
+<th style="padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #363A40; text-align: right">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">15/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Supermercado</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #32363B; color: #D5D8DC">Mercado</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Débito</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Variável</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #3DD68C">Pago</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">—</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 312,45</td>
+</tr><tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">14/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Farmácia</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #32363B; color: #D5D8DC">Saúde</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Pix</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Variável</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #3DD68C">Pago</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">—</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 64,90</td>
+</tr><tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">12/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Tesouro Selic</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #1E3A2B; color: #3DD68C">Investimento</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Pix</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Fixo</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #3DD68C">Pago</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Reserva</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 800,00</td>
+</tr><tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">10/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Cinema</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #32363B; color: #D5D8DC">Entretenimento</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Crédito</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Variável</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #3DD68C">Pago</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">2 ingressos</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 96,00</td>
+</tr><tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">08/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Uber</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #32363B; color: #D5D8DC">Transporte</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Crédito</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Variável</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #3DD68C">Pago</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">—</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 42,30</td>
+</tr><tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">05/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Aluguel</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #32363B; color: #D5D8DC">Moradia</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Boleto</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Fixo</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #3DD68C">Pago</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">—</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 1.650,00</td>
+</tr><tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">05/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Netflix</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #32363B; color: #D5D8DC">Assinatura</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Crédito</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Fixo</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #3DD68C">Pago</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Plano padrão</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 55,90</td>
+</tr><tr>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE; font-variant-numeric: tabular-nums">20/11</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; font-weight: 500">Internet</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: #32363B; color: #D5D8DC">Contas</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Débito auto.</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Fixo</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40"><span style="font-size: 13px; font-weight: 600; color: #F28B5B">Pendente</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; color: #A3A8AE">Vence dia 20</td>
+<td style="padding: 12px; border-bottom: 1px solid #363A40; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums">R$ 109,90</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 0; font-size: 12px; color: #A3A8AE">Dados de exemplo, só para visualizar o layout.</p>
+</section>
+
+</main>
+</div>
+</body></html>
