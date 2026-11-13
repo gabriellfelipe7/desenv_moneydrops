@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="src/assets/brand/logo-horizontal.svg" alt="MoneyDrops" width="320">
+</p>
+
 # 💰 Planejador Financeiro Inteligente - MoneyDrops
  
 > Um planejador financeiro pessoal na web, simples, objetivo e acessível. Acompanhe o mercado, aprenda os conceitos que importam e controle seus gastos mês a mês, tudo em um só lugar.
@@ -17,6 +21,31 @@ O **Planejador Financeiro Pessoal** é uma aplicação web que reúne, em uma in
 ### 🎯 Visão de futuro
  
 A ideia é que o projeto evolua para um **serviço por assinatura de baixo custo**: uma alternativa acessível às planilhas manuais e aos apps financeiros caros, com foco em clareza e simplicidade.
+
+---
+
+## 🖼️ Telas
+
+Layouts das quatro abas com a [identidade visual](docs/identidade-visual.md) do MoneyDrops. Os valores são dados de exemplo.
+
+| Início | Estudos |
+|---|---|
+| ![Aba Início](docs/design/screenshots/inicio-claro.png) | ![Aba Estudos](docs/design/screenshots/estudos-claro.png) |
+| **Planejador do mês** | **Resumo e estatísticas** |
+| ![Aba Planejador do mês](docs/design/screenshots/planejador-claro.png) | ![Aba Resumo e estatísticas](docs/design/screenshots/resumo-claro.png) |
+
+<details>
+<summary><strong>🌙 Ver as telas no modo escuro</strong></summary>
+
+| Início | Estudos |
+|---|---|
+| ![Aba Início, modo escuro](docs/design/screenshots/inicio-escuro.png) | ![Aba Estudos, modo escuro](docs/design/screenshots/estudos-escuro.png) |
+| **Planejador do mês** | **Resumo e estatísticas** |
+| ![Aba Planejador do mês, modo escuro](docs/design/screenshots/planejador-escuro.png) | ![Aba Resumo e estatísticas, modo escuro](docs/design/screenshots/resumo-escuro.png) |
+
+</details>
+
+Mais detalhes de cada tela em [`docs/design`](docs/design/README.md). Para navegar entre elas no navegador, abra os arquivos de [`docs/design/prototipo`](docs/design/prototipo).
  
 ---
  
@@ -212,8 +241,8 @@ type Mes = {
  
 ```bash
 # Clonar o repositório
-git clone https://github.com/<seu-usuario>/<nome-do-repo>.git
-cd <nome-do-repo>
+git clone https://github.com/gabriellfelipe7/desenv_moneydrops.git
+cd desenv_moneydrops
  
 # Instalar dependências
 npm install
