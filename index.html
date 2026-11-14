@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoneyDrops</title>
+    <meta
+      name="description"
+      content="Planejador financeiro pessoal: acompanhe o mercado, aprenda os conceitos e controle seus gastos mês a mês."
+    />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#F7F6F2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1E2023" media="(prefers-color-scheme: dark)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      // Aplica o tema salvo antes da primeira pintura, para a tela não piscar.
+      try {
+        var tema = localStorage.getItem('moneydrops:tema');
+        if (tema === 'claro') document.documentElement.dataset.theme = 'light';
+        if (tema === 'escuro') document.documentElement.dataset.theme = 'dark';
+      } catch (e) {
+        /* sem acesso ao localStorage: segue o tema do sistema */
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

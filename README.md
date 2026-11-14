@@ -189,22 +189,25 @@ Opções de APIs públicas a avaliar (verificar limites, termos de uso e planos 
  
 ---
  
-## 🗂️ Estrutura de pastas (sugestão)
- 
+## 🗂️ Estrutura de pastas
+
+O código é organizado por funcionalidade: cada aba tem a sua pasta, e o que é comum fica em `shared`.
+
 ```
 src/
-├── components/        # Componentes reutilizáveis (cards, gráficos, tabela)
-├── pages/
-│   ├── Inicio/        # Aba 1: notícias e conteúdo
-│   ├── Estudos/       # Aba 2: glossário financeiro
-│   ├── Planejador/    # Aba 3: controle do mês atual
-│   └── Dashboard/     # Aba 4: resumo e estatísticas
-├── data/
-│   └── glossario.json # Conceitos, definições e exemplos
-├── services/          # Integração com APIs externas
-├── hooks/             # Hooks customizados
-├── utils/             # Formatação de moeda, datas, cálculos
-└── types/             # Tipagens (Gasto, Categoria, Mes...)
+├── features/
+│   ├── inicio/        # Aba 1: notícias e conteúdo
+│   ├── estudos/       # Aba 2: glossário financeiro
+│   ├── planejador/    # Aba 3: controle do mês atual
+│   └── resumo/        # Aba 4: resumo e estatísticas
+├── shared/
+│   ├── components/    # Layout, cabeçalho, logo, botão de tema
+│   ├── hooks/         # useTema
+│   └── utils/         # Formatação de moeda (valores em centavos)
+├── styles/            # tokens.css (identidade visual) e global.css
+├── assets/brand/      # Logos
+├── App.tsx            # Rotas
+└── main.tsx           # Ponto de entrada
 ```
  
 ### Modelo de dados (rascunho)
@@ -236,33 +239,32 @@ type Mes = {
 ---
  
 ## 🚀 Como rodar localmente
- 
-> Instruções a serem atualizadas conforme a stack for definida.
- 
+
+Requer [Node.js](https://nodejs.org) 20.19 ou mais recente.
+
 ```bash
 # Clonar o repositório
 git clone https://github.com/gabriellfelipe7/desenv_moneydrops.git
 cd desenv_moneydrops
- 
+
 # Instalar dependências
 npm install
- 
-# Configurar variáveis de ambiente
-cp .env.example .env
-# preencha as chaves das APIs no .env
- 
-# Rodar em modo de desenvolvimento
+
+# Rodar em modo de desenvolvimento (http://localhost:5173)
 npm run dev
 ```
- 
-### Variáveis de ambiente
- 
-```env
-NEWS_API_KEY=
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
-```
- 
+
+| Comando | O que faz |
+|---|---|
+| `npm run dev` | Sobe o app local, com atualização automática |
+| `npm run build` | Checa os tipos e gera a versão de produção em `dist/` |
+| `npm run preview` | Serve a versão de produção localmente |
+| `npm test` | Roda os testes |
+| `npm run lint` | Analisa o código com o ESLint |
+| `npm run format` | Formata o código com o Prettier |
+
+O andamento do desenvolvimento está em [`docs/CHECKLIST.md`](docs/CHECKLIST.md).
+
 ---
  
 ## 🗺️ Roadmap
