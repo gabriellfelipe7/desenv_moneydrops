@@ -1,0 +1,253 @@
+/* ==========================================================================
+   MoneyDrops — Estilos globais
+   Base do app e componentes compartilhados. Todas as cores, fontes e medidas
+   vêm de tokens.css; não use valores soltos aqui.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--md-text-body);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.625rem, 4vw, var(--md-text-display));
+  font-weight: var(--md-weight-bold);
+  letter-spacing: var(--md-tracking-tight);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: var(--md-text-subtitle);
+  font-weight: var(--md-weight-semibold);
+}
+
+a {
+  color: var(--md-green);
+}
+
+a:hover {
+  color: var(--md-green-hover);
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--md-green);
+  outline-offset: 2px;
+}
+
+/* ---------- Acessibilidade ---------- */
+
+.pular-para-conteudo {
+  position: absolute;
+  left: var(--md-space-4);
+  top: -100px;
+  z-index: 10;
+  padding: var(--md-space-3) var(--md-space-4);
+  border-radius: var(--md-radius-sm);
+  background: var(--md-green);
+  color: var(--md-on-green);
+  font-weight: var(--md-weight-semibold);
+}
+
+.pular-para-conteudo:focus {
+  top: var(--md-space-2);
+  color: var(--md-on-green);
+}
+
+/* ---------- Cabeçalho ---------- */
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--md-surface);
+  border-bottom: 1px solid var(--md-border);
+}
+
+.cabecalho__conteudo {
+  max-width: var(--md-container);
+  margin: 0 auto;
+  padding: 0 var(--md-space-5);
+  min-height: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--md-space-4);
+}
+
+.cabecalho__logo {
+  text-decoration: none;
+  color: var(--md-text);
+  display: flex;
+  align-items: center;
+  min-height: var(--md-touch-target);
+}
+
+.cabecalho__logo:hover {
+  color: var(--md-text);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo__nome {
+  font-size: 1.25rem;
+  font-weight: var(--md-weight-bold);
+  letter-spacing: -0.03em;
+}
+
+.logo__drops {
+  color: var(--md-green);
+}
+
+/* ---------- Abas ---------- */
+
+.abas {
+  display: flex;
+  gap: var(--md-space-1);
+}
+
+.aba {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  padding: 0 14px;
+  border-bottom: 2px solid transparent;
+  color: var(--md-text-secondary);
+  font-size: 0.9375rem;
+  font-weight: var(--md-weight-medium);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.aba:hover {
+  color: var(--md-text);
+}
+
+.aba--ativa {
+  color: var(--md-text);
+  font-weight: var(--md-weight-semibold);
+  border-bottom-color: var(--md-green);
+}
+
+/* No celular, as abas descem para uma segunda linha, com rolagem lateral */
+@media (max-width: 720px) {
+  .cabecalho__conteudo {
+    padding: 0 var(--md-space-4);
+  }
+
+  .abas {
+    order: 3;
+    flex-basis: 100%;
+    overflow-x: auto;
+    margin: 0 calc(var(--md-space-4) * -1);
+    padding: 0 var(--md-space-2);
+    border-top: 1px solid var(--md-border);
+  }
+
+  .aba {
+    flex: 1 0 auto;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .cabecalho__conteudo {
+    min-height: 60px;
+  }
+}
+
+/* ---------- Botões ---------- */
+
+.botao-icone {
+  width: var(--md-touch-target);
+  height: var(--md-touch-target);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--md-border);
+  border-radius: var(--md-radius-sm);
+  background: var(--md-surface);
+  color: var(--md-text);
+  cursor: pointer;
+}
+
+.botao-icone:hover {
+  border-color: var(--md-border-strong);
+}
+
+/* ---------- Página ---------- */
+
+.pagina {
+  max-width: var(--md-container);
+  margin: 0 auto;
+  padding: var(--md-space-6) var(--md-space-5) var(--md-space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-space-5);
+}
+
+@media (max-width: 720px) {
+  .pagina {
+    padding: var(--md-space-5) var(--md-space-4) var(--md-space-6);
+  }
+}
+
+.pagina__titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rotulo {
+  font-size: var(--md-text-caption);
+  font-weight: var(--md-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-text-secondary);
+}
+
+.texto-secundario {
+  color: var(--md-text-secondary);
+}
+
+/* ---------- Cartão ---------- */
+
+.cartao {
+  background: var(--md-surface);
+  border: 1px solid var(--md-border);
+  border-radius: var(--md-radius-md);
+  box-shadow: var(--md-shadow);
+  padding: var(--md-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-space-3);
+}
+
+.lista {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-space-2);
+  color: var(--md-text-secondary);
+}
