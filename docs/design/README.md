@@ -5,11 +5,11 @@ Referência visual das quatro abas do app, usando a [identidade visual](../ident
 - **`screenshots/`** — imagens de cada tela nos modos claro e escuro.
 - **`prototipo/`** — as mesmas telas em HTML estático. Abra qualquer arquivo no navegador; o menu do topo navega entre as abas.
 
-> Os valores e manchetes são **dados de exemplo**, só para visualizar o layout. As definições da aba Estudos são conteúdo real e podem ir direto para o app.
+> Os valores e os títulos de artigos são **dados de exemplo**, só para visualizar o layout. As definições da aba Estudos são conteúdo real e podem ir direto para o app.
 
 ## 1. Início
 
-Cotações do dia, notícia em destaque, lista de notícias com filtro Nacional/Internacional, dica do dia, artigos e um resumo do mês.
+Dica do dia, leituras recomendadas com filtro por tema, livros indicados, um resumo do mês e um caminho sugerido pelas outras abas. O conteúdo vem de curadoria própria, sem APIs externas.
 
 | Claro | Escuro |
 |---|---|

@@ -4,7 +4,7 @@
 
 # 💰 Planejador Financeiro Inteligente - MoneyDrops
  
-> Um planejador financeiro pessoal na web, simples, objetivo e acessível. Acompanhe o mercado, aprenda os conceitos que importam e controle seus gastos mês a mês, tudo em um só lugar.
+> Um planejador financeiro pessoal na web, simples, objetivo e acessível. Descubra boas leituras, aprenda os conceitos que importam e controle seus gastos mês a mês, tudo em um só lugar.
  
 ![status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![licença](https://img.shields.io/badge/licen%C3%A7a-a%20definir-lightgrey)
@@ -15,7 +15,7 @@
  
 O **Planejador Financeiro Pessoal** é uma aplicação web que reúne, em uma interface única, três necessidades de quem quer organizar a vida financeira:
  
-1. **Informação**: notícias do mercado financeiro nacional e internacional, dicas e artigos.
+1. **Leitura**: artigos e livros recomendados, escolhidos a dedo, e uma dica financeira por dia.
 2. **Educação**: um glossário interativo com os principais conceitos de finanças pessoais e investimentos.
 3. **Controle**: um planejador de gastos mensal com gráficos, além de um dashboard que consolida todo o histórico.
 ### 🎯 Visão de futuro
@@ -53,17 +53,18 @@ Mais detalhes de cada tela em [`docs/design`](docs/design/README.md). Para naveg
  
 O app é organizado em **quatro abas**:
  
-### 1. 🏠 Início: Notícias e Conteúdo
- 
-A página de entrada, com um panorama do que está acontecendo no mercado.
- 
-- **Notícias do mercado nacional**: bolsa, juros, inflação, câmbio.
-- **Notícias do mercado internacional**: principais bolsas, economia global, criptoativos.
-- **Indicadores do dia** (sugestão): Selic, CDI, IPCA, dólar, Ibovespa.
-- **Dicas financeiras**: cards curtos com dicas práticas de organização e economia.
-- **Artigos**: textos mais longos sobre finanças pessoais e investimentos.
-Os dados vêm de **APIs públicas** de notícias e de indicadores econômicos (ver [APIs](#-apis-e-fontes-de-dados)).
- 
+### 1. 🏠 Início: Leituras recomendadas
+
+A página de entrada, com conteúdo selecionado para quem quer cuidar melhor do dinheiro.
+
+- **Dica do dia**: uma dica prática de organização e economia, trocada a cada dia.
+- **Leituras recomendadas**: artigos de finanças pessoais e investimentos, com tema, tempo de leitura e link para a fonte original.
+- **Livros**: indicações do básico ao avançado, com o motivo para ler cada um.
+- **Seu mês até agora**: um resumo do Planejador, com atalho para ele.
+- **Por onde começar**: um caminho sugerido pelas outras abas.
+
+O conteúdo é uma **curadoria própria**, guardada em arquivos do projeto. Não depende de APIs externas, não tem custo e mantém a qualidade e o idioma sob controle.
+
 ---
  
 ### 2. 📚 Estudos: Glossário Financeiro
@@ -173,22 +174,16 @@ Um mini dashboard com **todo o histórico financeiro** do usuário, mês a mês.
  
 ---
  
-## 🔌 APIs e fontes de dados
- 
-Opções de APIs públicas a avaliar (verificar limites, termos de uso e planos gratuitos de cada uma):
- 
-| Uso | Fonte |
-|---|---|
-| Notícias | NewsAPI, GNews, NewsData.io, feeds RSS de portais financeiros |
-| Indicadores do Brasil (Selic, CDI, IPCA) | API SGS do Banco Central do Brasil |
-| Cotações da B3 | brapi.dev |
-| Câmbio | AwesomeAPI (economia.awesomeapi.com.br), API PTAX do Banco Central |
-| Mercado internacional | Alpha Vantage, Finnhub |
- 
-> ⚠️ Algumas APIs de notícias não permitem uso em produção ou uso comercial no plano gratuito. Confira os termos antes de lançar a versão por assinatura.
- 
+## 📚 Fontes de conteúdo
+
+A primeira versão não usa APIs externas: as leituras, os livros, as dicas e o glossário são arquivos JSON do próprio projeto, atualizados manualmente.
+
+APIs de notícias foram descartadas por enquanto. Os planos gratuitos das principais não permitem uso comercial, e os pagos seriam o maior custo fixo do app.
+
+Para o futuro, se fizer sentido mostrar indicadores (Selic, CDI, IPCA, câmbio), há fontes públicas a avaliar, como a API SGS e a PTAX do Banco Central do Brasil.
+
 ---
- 
+
 ## 🗂️ Estrutura de pastas
 
 O código é organizado por funcionalidade: cada aba tem a sua pasta, e o que é comum fica em `shared`.
@@ -196,7 +191,7 @@ O código é organizado por funcionalidade: cada aba tem a sua pasta, e o que é
 ```
 src/
 ├── features/
-│   ├── inicio/        # Aba 1: notícias e conteúdo
+│   ├── inicio/        # Aba 1: leituras recomendadas
 │   ├── estudos/       # Aba 2: glossário financeiro
 │   ├── planejador/    # Aba 3: controle do mês atual
 │   └── resumo/        # Aba 4: resumo e estatísticas
@@ -270,11 +265,11 @@ O andamento do desenvolvimento está em [`docs/CHECKLIST.md`](docs/CHECKLIST.md)
 ## 🗺️ Roadmap
  
 ### MVP
-- [ ] Estrutura do projeto e navegação entre as quatro abas
+- [x] Estrutura do projeto e navegação entre as quatro abas
 - [ ] Aba Estudos com glossário estático (JSON)
 - [ ] Aba Planejador com planilha e gráficos (dados salvos localmente)
 - [ ] Aba Dashboard com consolidação dos meses
-- [ ] Aba Início com integração a uma API de notícias
+- [ ] Aba Início com leituras, livros e dica do dia (curadoria em JSON)
 ### Versão 1.0
 - [ ] Cadastro e login de usuários
 - [ ] Persistência em banco de dados na nuvem
