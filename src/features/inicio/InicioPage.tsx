@@ -4,12 +4,12 @@ export function InicioPage() {
   return (
     <PaginaEmConstrucao
       secao="Início"
-      titulo="O que movimentou o mercado hoje"
-      descricao="Notícias, cotações e conteúdo para acompanhar o mercado financeiro."
+      titulo="Leituras para cuidar melhor do seu dinheiro"
+      descricao="Artigos e livros escolhidos a dedo, do básico ao avançado."
       itens={[
-        'Cotações do dia: Ibovespa, dólar, IFIX e bitcoin',
-        'Notícia em destaque e lista de notícias nacionais e internacionais',
-        'Dica do dia e artigos de finanças pessoais',
+        'Dica do dia',
+        'Leituras recomendadas, com filtro por tema',
+        'Livros indicados, do básico ao avançado',
         'Resumo do seu mês, com atalho para o Planejador',
       ]}
     />

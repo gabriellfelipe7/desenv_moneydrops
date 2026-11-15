@@ -49,10 +49,15 @@ A ordem vai do que entrega valor mais cedo ao que depende de mais infraestrutura
 
 ## Fase 5: Início
 
-- [ ] Escolher as APIs de notícias e cotações, conferindo os termos de uso comercial
-- [ ] Criar uma função no servidor para buscar os dados, sem expor as chaves
-- [ ] Faixa de cotações, destaque e lista de notícias com filtro
-- [ ] Dica do dia, artigos e resumo do mês
+Conteúdo por curadoria própria, sem APIs externas. Como é estático, pode ser antecipada.
+
+- [x] Redesenhar o layout da aba, sem cotações e notícias
+- [ ] Montar o `leituras.json`: artigos com tema, tempo de leitura e link para a fonte
+- [ ] Montar o `livros.json`: título, autor, nível e por que ler
+- [ ] Montar o `dicas.json` e sortear a dica do dia
+- [ ] Lista de leituras com filtro por tema e grade de livros
+- [ ] Cards "Seu mês até agora" e "Por onde começar"
+- [ ] Definir a rotina de atualização do conteúdo (por exemplo, uma vez por mês)
 
 ## Fase 6: Contas e nuvem
 
